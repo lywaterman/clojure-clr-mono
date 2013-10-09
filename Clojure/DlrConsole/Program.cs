@@ -38,6 +38,8 @@ namespace DlrConsole
             ScriptRuntime env = new ScriptRuntime(setup);
 
             ScriptEngine curEngine = env.GetEngine("clj");
+
+			//dynamic xx = curEngine.Execute ("(def x 1)");
             Console.WriteLine("CurrentEngine: {0}", curEngine.LanguageVersion.ToString());
             ScriptScope scope = curEngine.CreateScope();
             Console.WriteLine("Scope: {0}", scope.GetItems());

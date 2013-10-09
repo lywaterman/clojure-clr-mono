@@ -71,13 +71,13 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.Dynamic">
-      <HintPath>..\..\..\Microsoft.Dynamic.dll</HintPath>
+      <HintPath>..\..\Microsoft.Dynamic.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Scripting.Debugging">
-      <HintPath>..\..\..\Microsoft.Scripting.Debugging.dll</HintPath>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\..\Microsoft.Scripting.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting">
-      <HintPath>..\..\..\Microsoft.Scripting.dll</HintPath>
+      <HintPath>..\..\Microsoft.Scripting.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

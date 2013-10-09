@@ -30,6 +30,7 @@ namespace Clojure
 
         static void Main(string[] args)
         {
+			RT.readString ("(def x 1)");
             REQUIRE.invoke(CLOJURE_MAIN);
             MAIN.applyTo(RT.seq(args));
 

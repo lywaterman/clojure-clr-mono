@@ -30,10 +30,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Clojure\Clojure.csproj">
+      <Project>{B8089F66-DFBD-4906-BEE0-B317689C2524}</Project>
+      <Name>Clojure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Clojure.Compile\Clojure.Compile.csproj">
+      <Project>{3DBF3359-43B5-47C9-9E4D-CF50D7587F20}</Project>
+      <Name>Clojure.Compile</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

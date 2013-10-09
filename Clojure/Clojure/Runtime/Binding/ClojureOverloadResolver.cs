@@ -45,7 +45,7 @@ namespace clojure.lang.Runtime.Binding
             _binder = binder;
         }
 
-        public override DefaultOverloadResolver CreateOverloadResolver(IList<DynamicMetaObject> args, CallSignature signature, CallTypes callType)
+		public override DefaultOverloadResolver CreateOverloadResolver (IList<DynamicMetaObject> args, CallSignature signature, CallTypes callType)
         {
             return new ClojureOverloadResolver(_binder, args, signature, callType);
         }

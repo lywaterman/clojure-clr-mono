@@ -30,6 +30,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>Clojure.CljMain</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 3.5|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 3.5|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -62,9 +64,9 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 4.0|AnyCPU'">
-    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\..\bin\4.0\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -94,16 +96,6 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Clojure.Compile\Clojure.Compile.csproj">
-      <Project>{3DBF3359-43B5-47C9-9E4D-CF50D7587F20}</Project>
-      <Name>Clojure.Compile</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Clojure\Clojure.csproj">
-      <Project>{B8089F66-DFBD-4906-BEE0-B317689C2524}</Project>
-      <Name>Clojure</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -137,4 +129,14 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clojure\Clojure.csproj">
+      <Project>{B8089F66-DFBD-4906-BEE0-B317689C2524}</Project>
+      <Name>Clojure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Clojure.Compile\Clojure.Compile.csproj">
+      <Project>{3DBF3359-43B5-47C9-9E4D-CF50D7587F20}</Project>
+      <Name>Clojure.Compile</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

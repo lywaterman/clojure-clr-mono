@@ -40,7 +40,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\bin\3.5\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;CLR2</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -90,17 +90,19 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.Dynamic">
-      <HintPath>..\..\..\Microsoft.Dynamic.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Scripting.Debugging">
-      <HintPath>..\..\..\Microsoft.Scripting.Debugging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Scripting">
-      <HintPath>..\..\..\Microsoft.Scripting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Dynamic" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\..\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\..\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CljCompiler\Ast\IlGen.cs" />
@@ -324,6 +326,33 @@
     <Compile Include="Runtime\Printf.cs" />
     <Compile Include="Runtime\Properties.cs" />
     <Compile Include="Runtime\Reflector.cs" />
+    <Compile Include="Actions\BinaryOperationBinder.cs" />
+    <Compile Include="Actions\BindingRestrictions.cs" />
+    <Compile Include="Actions\CallInfo.cs" />
+    <Compile Include="Actions\CallSite.cs" />
+    <Compile Include="Actions\CallSiteBinder.cs" />
+    <Compile Include="Actions\CallSiteHelpers.cs" />
+    <Compile Include="Actions\CallSiteOps.cs" />
+    <Compile Include="Actions\ConvertBinder.cs" />
+    <Compile Include="Actions\CreateInstanceBinder.cs" />
+    <Compile Include="Actions\DeleteIndexBinder.cs" />
+    <Compile Include="Actions\DeleteMemberBinder.cs" />
+    <Compile Include="Actions\DynamicMetaObject.cs" />
+    <Compile Include="Actions\DynamicMetaObjectBinder.cs" />
+    <Compile Include="Actions\DynamicObject.cs" />
+    <Compile Include="Actions\ExpandoClass.cs" />
+    <Compile Include="Actions\ExpandoObject.cs" />
+    <Compile Include="Actions\GetIndexBinder.cs" />
+    <Compile Include="Actions\GetMemberBinder.cs" />
+    <Compile Include="Actions\IDynamicMetaObjectProvider.cs" />
+    <Compile Include="Actions\IInvokeOnGetBinder.cs" />
+    <Compile Include="Actions\InvokeBinder.cs" />
+    <Compile Include="Actions\InvokeMemberBinder.cs" />
+    <Compile Include="Actions\RuleCache.cs" />
+    <Compile Include="Actions\SetIndexBinder.cs" />
+    <Compile Include="Actions\SetMemberBinder.cs" />
+    <Compile Include="Actions\UnaryOperationBinder.cs" />
+    <Compile Include="Actions\UpdateDelegates.Generated.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -370,4 +399,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Actions\" />
+  </ItemGroup>
 </Project>

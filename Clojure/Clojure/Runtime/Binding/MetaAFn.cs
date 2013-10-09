@@ -7,7 +7,6 @@ using System.Linq.Expressions;
 using System.Dynamic;
 using Microsoft.Scripting.Actions.Calls;
 using System.Reflection;
-using System.Linq.Expressions;
 
 namespace clojure.lang.Runtime.Binding
 {

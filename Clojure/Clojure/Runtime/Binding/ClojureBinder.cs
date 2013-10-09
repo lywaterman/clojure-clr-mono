@@ -16,7 +16,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 #if CLR2
 using Microsoft.Scripting.Ast;
 #else

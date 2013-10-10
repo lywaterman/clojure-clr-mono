@@ -21,7 +21,6 @@
     <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -35,20 +34,22 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Clojure">
+      <HintPath>..\..\bin\4.0\Release\Clojure.dll</HintPath>
+    </Reference>
+    <Reference Include="clojure.core.clj">
+      <HintPath>..\..\bin\4.0\Release\clojure.core.clj.dll</HintPath>
+    </Reference>
+    <Reference Include="clojure.clr.shell.clj">
+      <HintPath>bin\Release\clojure.clr.shell.clj.dll</HintPath>
+    </Reference>
+    <Reference Include="Clojure.Source">
+      <HintPath>..\..\bin\4.0\Release\Clojure.Source.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Clojure\Clojure.csproj">
-      <Project>{B8089F66-DFBD-4906-BEE0-B317689C2524}</Project>
-      <Name>Clojure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Clojure.Compile\Clojure.Compile.csproj">
-      <Project>{3DBF3359-43B5-47C9-9E4D-CF50D7587F20}</Project>
-      <Name>Clojure.Compile</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

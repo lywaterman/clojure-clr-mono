@@ -3299,7 +3299,6 @@ namespace clojure.lang
                 Var.popThreadBindings();
             }
 
-
             bool loaded = TryLoadFromEmbeddedResource(relativePath, assemblyname);
 
 

@@ -1,0 +1,1 @@
+mono ./Clojure.Compile.exe clojure.core clojure.core.protocols clojure.main clojure.set clojure.zip  clojure.walk clojure.stacktrace clojure.template clojure.test clojure.test.tap clojure.test.junit clojure.pprint clojure.clr.io clojure.repl clojure.clr.shell clojure.string clojure.data clojure.reflect

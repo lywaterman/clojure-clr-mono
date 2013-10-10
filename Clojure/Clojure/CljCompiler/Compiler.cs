@@ -1459,7 +1459,13 @@ namespace clojure.lang
 #if MONO
             // I have no idea why Mono can't find our initializer types using Assembly.GetType(string).
             // This is roll-your-own.
-			Type[] types = assy.GetExportedTypes ();			foreach (Type t in types)             {				if (t.Name.Equals (typeName))					return t;			}			return null;
+			Type[] types = assy.GetExportedTypes ();
+			foreach (Type t in types) 
+            {
+				if (t.Name.Equals (typeName))
+					return t;
+			}
+			return null;
 #else
             return assy.GetType(typeName);
 #endif
@@ -1517,7 +1523,8 @@ namespace clojure.lang
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "load")]
         public static object loadFile(string fileName)
-        {            FileInfo finfo = new FileInfo(fileName);
+        {
+            FileInfo finfo = new FileInfo(fileName);
             if (!finfo.Exists)
                 throw new FileNotFoundException("Cannot find file to load", fileName);
 

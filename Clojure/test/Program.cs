@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using clojure.lang;
+using fuck;
 
 namespace test
 {
@@ -18,22 +19,10 @@ namespace test
 		{
 			Console.WriteLine ("Hello World!");
 
-			foreach (var asm in AppDomain.CurrentDomain.GetAssemblies()) {
-				Console.WriteLine (asm.FullName);
-				Console.WriteLine( asm.GetName().Name );
-				if (!asm.IsDynamic)
-				{
-					var stream = asm.GetManifestResourceStream("mscorlib");
-					var stream1 = asm.GetManifestResourceStream("Clojure.Source");
-
-					Console.WriteLine(stream);
-					Console.WriteLine(stream1);
-				}
-			}
+			new you ();
 
 			RuntimeBootstrapFlag.DisableFileLoad = true;
 
-			RuntimeBootstrapFlag._doRTBootstrap = false;
 
 			RT.readString ("(def x 1)");
 		}

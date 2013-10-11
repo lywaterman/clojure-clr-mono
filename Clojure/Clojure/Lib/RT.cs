@@ -604,7 +604,7 @@ namespace clojure.lang
             //sw.Stop();
             //Console.WriteLine("Initial clojure/core load: {0} milliseconds.", sw.ElapsedMilliseconds);
 
-            PostBootstrapInit();
+            //PostBootstrapInit();
         }
 
         public static void PostBootstrapInit()
@@ -622,6 +622,7 @@ namespace clojure.lang
                 Var refer = var("clojure.core", "refer");
                 in_ns.invoke(USER);
                 refer.invoke(CLOJURE);
+                Console.WriteLine("load use.clj");
                 MaybeLoadCljScript("user.clj");
             }
             finally

@@ -6917,8 +6917,8 @@
                     (reduce load-data-reader-file
                             mappings (data-reader-urls)))))
 
-(try
- (load-data-readers)
- (catch Exception t                                                                 ;;; Throwable
-   (System.Console/WriteLine (.StackTrace t))                                       ;;; .printStackTrace
-   (throw t)))
+;;(try
+;; (load-data-readers)
+;; (catch Exception t                                                                 ;;; Throwable
+;;   (System.Console/WriteLine (.StackTrace t))                                       ;;; .printStackTrace
+;;   (throw t)))
